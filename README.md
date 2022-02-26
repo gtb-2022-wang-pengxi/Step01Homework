@@ -40,3 +40,29 @@ chmod -x ~/bin/odd-or-even
 
 ```
 
+### 实现一个名为 next 的脚本，当在 CLI 里执行 $ next （$为提示符，不需要输入）时就返回一个整数，第一次返回 1，每执行一次加 1 参考答案还未准备好 
+
+```
+$ vi ~/bin/next
+
+#!/bin/bash
+
+if [[ ! -f "/tmp/value.dat" ]]
+then
+        NUMCOUNTER=0
+else
+        NUMCOUNTER=`cat /tmp/value.dat`
+fi
+
+
+NUMCOUNTER=$((NUMCOUNTER + 1))
+echo $NUMCOUNTER
+echo "$NUMCOUNTER" > /tmp/value.dat
+
+chmod +x ~/bin/next
+
+```
+
+### 
+
+
