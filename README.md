@@ -63,6 +63,10 @@ chmod +x ~/bin/next
 
 ```
 
-### 
+### 一个文件含有 N 行内容，每行的内容都是一个大于等于 0 的整数，无任何空行或其它内容，使用 one-liner 的形式对该文件中的数字求和参考答案还未准备好
+
+```
+SUM=0; while read -r line; do SUM=$(($SUM+$line)); done < numberTest.txt
+``` 
 
 
